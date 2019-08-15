@@ -1,7 +1,7 @@
 import sys
 
 def read_fasta(filename):
-"""Reads a fasta file and returns the sequence"""
+"""Reads a file in fasta format and returns the sequence"""
     sequence = ''
     f = open(filename)
     for line in f:
@@ -12,6 +12,7 @@ def read_fasta(filename):
     f.close()
     return sequence
 
+# user may not have provided any arguments
 if len(sys.argv) < 2:
     print('Usage:', sys.argv[0], '<sequence.fa>')
     exit(1)
